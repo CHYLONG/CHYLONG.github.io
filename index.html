@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="/assets/css/0.styles.204c33c2.css">
   </head>
   <body>
-    <div>测试数据文章数据结果</div>
+    <div>hahhfhasdf</div>
+
+    <canvas id="canvas" width="800px" height="800px"></canvas>
+
 
     <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" aria-current="page" class="home-link router-link-exact-active router-link-active"><img src="/egg.png" alt="Hello VuePress" class="logo"> <span class="site-name can-hide">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
   首页
@@ -46,5 +49,64 @@ details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专�
 details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。</li> <li>title: 高性能
 details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。</li></ul> <hr></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
     <script src="/assets/js/app.3c20fe42.js" defer></script><script src="/assets/js/2.933783b1.js" defer></script><script src="/assets/js/8.d3936ba2.js" defer></script>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        context.fillRect(0, 0, 100, 100);
+        context.strokeRect(120, 0, 100, 100);
+
+        context.fillStyle = "pink";
+        context.strokeStyle = "darkred";
+        context.fillRect(0, 0, 100, 100);
+        context.strokeRect(120, 0, 100, 100);
+
+        context.clearRect(20,20,60,60)
+
+        context.beginPath();
+        context.arc(300, 350, 100, Math.PI*0.5, Math.PI * 2, true);
+        //不关闭路径路径会一直保留下去
+        context.closePath();
+        context.fillStyle = 'rgba(0,255,0,0.25)';
+        context.fill();
+
+        context.beginPath();
+        context.arc(600, 350, 100, 0 , Math.PI*.5 , true);
+        context.strokeStyle = 'pink';
+        context.lineWidth = 4;
+        context.closePath();
+        context.stroke();
+
+        context.beginPath();
+        context.arc(300, 350, 100, 0, Math.PI * 2 , true);
+        context.strokeStyle = 'red';
+        context.shadowColor = '#f90';
+        context.shadowBlur = 10;
+        context.shadowOffsetX = 6;
+        context.closePath();
+        context.stroke();
+
+        context.moveTo(100,100);
+        context.lineTo(120,100);
+        context.lineTo(120,120);
+        context.lineTo(140,120);
+        context.lineWidth = 4;
+        context.strokeStyle  = "orange";
+        context.stroke();
+        // context.closePath();
+
+
+
+        context.strokeStyle = 'pink';
+        context.lineTo(200, 200);
+        context.lineTo(200, 100);
+        context.lineTo(100,50);
+        context.stroke();
+
+
+
+    </script>
+
+
   </body>
 </html>
